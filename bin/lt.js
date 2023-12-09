@@ -49,10 +49,17 @@ const { argv } = yargs
   .option('print-requests', {
     describe: 'Print basic request info',
   })
+  .option('session-connection', {
+    describe: 'Set connection to a section-based e.g Nodejs http server',
+  })
+  .option('session-timeout', {
+    describe: 'Set timeout for session connection',
+  })
   .require('port')
   .boolean('local-https')
   .boolean('allow-invalid-cert')
   .boolean('print-requests')
+  .boolean('session-connection')
   .help('help', 'Show this help and exit')
   .version(version);
 
@@ -73,6 +80,8 @@ if (typeof argv.port !== 'number') {
     local_key: argv.localKey,
     local_ca: argv.localCa,
     allow_invalid_cert: argv.allowInvalidCert,
+    session_connection: argv.sessionConnection,
+    session_timeout: argv.sessionTimeout,
   }).catch(err => {
     throw err;
   });
