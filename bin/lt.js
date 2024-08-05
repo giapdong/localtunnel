@@ -81,7 +81,6 @@ if (typeof argv.port !== 'number') {
     local_ca: argv.localCa,
     allow_invalid_cert: argv.allowInvalidCert,
     session_connection: argv.sessionConnection,
-    session_timeout: argv.sessionTimeout,
   }).catch(err => {
     throw err;
   });

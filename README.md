@@ -38,6 +38,8 @@ Thats it! It will connect to the tunnel server, setup the tunnel, and tell you w
 
 You can restart your local server all you want, `lt` is smart enough to detect this and reconnect once it is back.
 
+For debug: DEBUG=localtunnel:* node ./bin/lt.js
+
 ### Arguments
 
 Below are some common arguments. See `lt --help` for additional arguments
